@@ -1,0 +1,260 @@
+{
+  "categories": ["роллы", "суши", "сеты", "горячие блюда", "напитки"],
+  "products": [
+    {
+      "name": "Филадельфия",
+      "price": 490,
+      "ingredients": "Рис, лосось, сливочный сыр, нори",
+      "categories": ["роллы"],
+      "tags": ["хит"],
+      "image": "/images/philadelphia.jpg",
+      "oldPrice": 550
+    },
+    {
+      "name": "Калифорния с крабом",
+      "price": 420,
+      "ingredients": "Рис, краб, авокадо, огурец, икра масаго, нори",
+      "categories": ["роллы"],
+      "tags": ["акция"],
+      "image": "/images/california-crab.jpg",
+      "oldPrice": 480
+    },
+    {
+      "name": "Сет Самурай",
+      "price": 1290,
+      "ingredients": "Роллы Филадельфия, Калифорния, Спайси, Сяке",
+      "categories": ["сеты"],
+      "tags": ["хит", "акция"],
+      "image": "/images/samurai-set.jpg",
+      "oldPrice": 1490
+    },
+    {
+      "name": "Сяке суши",
+      "price": 120,
+      "ingredients": "Рис, лосось, нори",
+      "categories": ["суши"],
+      "tags": ["новинка"],
+      "image": "/images/salmon-sushi.jpg"
+    },
+    {
+      "name": "Унаги суши",
+      "price": 150,
+      "ingredients": "Рис, угорь, соус унаги, кунжут, нори",
+      "categories": ["суши"],
+      "tags": ["хит"],
+      "image": "/images/unagi-sushi.jpg",
+      "oldPrice": 170
+    },
+    {
+      "name": "Ролл с креветкой",
+      "price": 390,
+      "ingredients": "Рис, креветка, авокадо, огурец, нори",
+      "categories": ["роллы"],
+      "tags": ["новинка"],
+      "image": "/images/shrimp-roll.jpg"
+    },
+    {
+      "name": "Сет Вегетарианский",
+      "price": 990,
+      "ingredients": "Роллы с авокадо, огурцом, перцем, тофу",
+      "categories": ["сеты"],
+      "tags": ["акция"],
+      "image": "/images/vege-set.jpg"
+    },
+    {
+      "name": "Горячий ролл с курицей",
+      "price": 410,
+      "ingredients": "Рис, курица, сыр, панировка, нори",
+      "categories": ["горячие блюда", "роллы"],
+      "tags": ["новинка"],
+      "image": "/images/hot-chicken-roll.jpg",
+      "oldPrice": 450
+    },
+    {
+      "name": "Мисо суп",
+      "price": 180,
+      "ingredients": "Мисо паста, тофу, водоросли вакаме, зеленый лук",
+      "categories": ["горячие блюда"],
+      "tags": ["хит"],
+      "image": "/images/miso-soup.jpg"
+    },
+    {
+      "name": "Сет Премиум",
+      "price": 1790,
+      "ingredients": "Роллы Филадельфия, Унаги, Калифорния, суши",
+      "categories": ["сеты"],
+      "tags": ["хит", "новинка"],
+      "image": "/images/premium-set.jpg",
+      "oldPrice": 1990
+    },
+    {
+      "name": "Суши с тунцом",
+      "price": 130,
+      "ingredients": "Рис, тунец, нори",
+      "categories": ["суши"],
+      "tags": ["новинка"],
+      "image": "/images/tuna-sushi.jpg"
+    },
+    {
+      "name": "Ролл с авокадо",
+      "price": 210,
+      "ingredients": "Рис, авокадо, нори",
+      "categories": ["роллы"],
+      "tags": ["акция"],
+      "image": "/images/avocado-roll.jpg"
+    },
+    {
+      "name": "Сет Мини",
+      "price": 690,
+      "ingredients": "Роллы Калифорния, Сяке, суши с лососем",
+      "categories": ["сеты"],
+      "tags": ["акция"],
+      "image": "/images/mini-set.jpg"
+    },
+    {
+      "name": "Горячий ролл с лососем",
+      "price": 430,
+      "ingredients": "Рис, лосось, сыр, панировка, нори",
+      "categories": ["горячие блюда", "роллы"],
+      "tags": ["хит"],
+      "image": "/images/hot-salmon-roll.jpg"
+    },
+    {
+      "name": "Зеленый чай",
+      "price": 90,
+      "ingredients": "Зеленый чай листовой",
+      "categories": ["напитки"],
+      "tags": ["новинка"],
+      "image": "/images/green-tea.jpg"
+    },
+    {
+      "name": "Кока-кола 0.5л",
+      "price": 110,
+      "ingredients": "Газированный напиток",
+      "categories": ["напитки"],
+      "tags": ["акция"],
+      "image": "/images/coca-cola.jpg"
+    },
+    {
+      "name": "Сет Лайт",
+      "price": 850,
+      "ingredients": "Роллы с огурцом, авокадо, суши с лососем",
+      "categories": ["сеты"],
+      "tags": ["новинка"],
+      "image": "/images/light-set.jpg"
+    },
+    {
+      "name": "Суши с креветкой",
+      "price": 140,
+      "ingredients": "Рис, креветка, нори",
+      "categories": ["суши"],
+      "tags": ["акция"],
+      "image": "/images/shrimp-sushi.jpg"
+    },
+    {
+      "name": "Ролл с тунцом",
+      "price": 320,
+      "ingredients": "Рис, тунец, огурец, нори",
+      "categories": ["роллы"],
+      "tags": ["новинка"],
+      "image": "/images/tuna-roll.jpg"
+    },
+    {
+      "name": "Горячий ролл с угрем",
+      "price": 470,
+      "ingredients": "Рис, угорь, сыр, панировка, нори",
+      "categories": ["горячие блюда", "роллы"],
+      "tags": ["акция"],
+      "image": "/images/hot-eel-roll.jpg"
+    },
+    {
+      "name": "Сет Фреш",
+      "price": 1050,
+      "ingredients": "Роллы с лососем, авокадо, суши с тунцом",
+      "categories": ["сеты"],
+      "tags": ["новинка"],
+      "image": "/images/fresh-set.jpg"
+    },
+    {
+      "name": "Суши с угрем",
+      "price": 160,
+      "ingredients": "Рис, угорь, нори",
+      "categories": ["суши"],
+      "tags": ["хит"],
+      "image": "/images/eel-sushi.jpg"
+    },
+    {
+      "name": "Ролл с огурцом",
+      "price": 180,
+      "ingredients": "Рис, огурец, нори",
+      "categories": ["роллы"],
+      "tags": ["акция"],
+      "image": "/images/cucumber-roll.jpg"
+    },
+    {
+      "name": "Сет Мега",
+      "price": 1990,
+      "ingredients": "Роллы Филадельфия, Калифорния, суши с лососем, угрем, тунцом",
+      "categories": ["сеты"],
+      "tags": ["хит"],
+      "image": "/images/mega-set.jpg",
+      "oldPrice": 2290
+    },
+    {
+      "name": "Горячий ролл с креветкой",
+      "price": 450,
+      "ingredients": "Рис, креветка, сыр, панировка, нори",
+      "categories": ["горячие блюда", "роллы"],
+      "tags": ["новинка"],
+      "image": "/images/hot-shrimp-roll.jpg"
+    },
+    {
+      "name": "Сет Классик",
+      "price": 1190,
+      "ingredients": "Роллы Калифорния, Филадельфия, суши с лососем",
+      "categories": ["сеты"],
+      "tags": ["акция"],
+      "image": "/images/classic-set.jpg"
+    },
+    {
+      "name": "Суши с лососем и авокадо",
+      "price": 150,
+      "ingredients": "Рис, лосось, авокадо, нори",
+      "categories": ["суши"],
+      "tags": ["новинка"],
+      "image": "/images/salmon-avocado-sushi.jpg"
+    },
+    {
+      "name": "Ролл с лососем и авокадо",
+      "price": 350,
+      "ingredients": "Рис, лосось, авокадо, нори",
+      "categories": ["роллы"],
+      "tags": ["хит"],
+      "image": "/images/salmon-avocado-roll.jpg"
+    },
+    {
+      "name": "Горячий ролл с тунцом",
+      "price": 440,
+      "ingredients": "Рис, тунец, сыр, панировка, нори",
+      "categories": ["горячие блюда", "роллы"],
+      "tags": ["акция"],
+      "image": "/images/hot-tuna-roll.jpg"
+    },
+    {
+      "name": "Сет Экзотик",
+      "price": 1390,
+      "ingredients": "Роллы с манго, лососем, авокадо, суши с креветкой",
+      "categories": ["сеты"],
+      "tags": ["новинка"],
+      "image": "/images/exotic-set.jpg"
+    },
+    {
+      "name": "Лимонад 0.5л",
+      "price": 120,
+      "ingredients": "Лимон, сахар, вода, газ",
+      "categories": ["напитки"],
+      "tags": ["новинка"],
+      "image": "/images/lemonade.jpg"
+    }
+  ]
+}
