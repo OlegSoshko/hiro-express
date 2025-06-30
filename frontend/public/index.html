@@ -1,132 +1,96 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Hiro Express</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" href="/favicon.ico" />
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  </head>
-  <body class="bg-white font-sans">
-    <header class="sticky top-0 bg-white shadow-md z-10">
-      <div
-        class="container mx-auto px-4 py-3 flex justify-between items-center"
-      >
-        <img src="/images/logo.png" alt="Hiro Express" class="h-10" />
-        <button
-          id="cartBtn"
-          class="relative bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition transform hover:scale-105"
-        >
-          Корзина (<span id="cartCount">0</span>)
-        </button>
-      </div>
-    </header>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hiro Express - Доставка суши и роллов</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <main class="container mx-auto px-4 py-6">
-      <!-- Hero Section -->
-      <section class="mb-8">
-        <img
-          src="/images/sushi-hero.jpg"
-          alt="Sushi Hero"
-          class="w-full rounded-lg shadow-lg"
-        />
-        <h1 class="text-3xl font-bold mt-4 text-gray-800">
-          Hiro Express — Вкус Японии
-        </h1>
-        <p class="text-gray-600">
-          Быстрая доставка суши и роллов в вашем городе!
-        </p>
-        <button
-          class="mt-4 bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition transform hover:scale-105"
-        >
-          Заказать сейчас
-        </button>
-      </section>
-
-      <!-- Promotions -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Акции</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div
-            class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <h3 class="text-lg font-semibold">Сет на двоих -10%</h3>
-            <p class="text-gray-600">Только сегодня!</p>
-          </div>
-          <div
-            class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <h3 class="text-lg font-semibold">Бесплатная доставка</h3>
-            <p class="text-gray-600">При заказе от 1000 ₽</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Catalog -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Меню</h2>
-        <div class="flex space-x-4 mb-4 overflow-x-auto">
-          <button
-            class="category-btn bg-red-500 text-white px-4 py-2 rounded-full"
-            data-category="all"
-          >
-            Все
-          </button>
-          <button
-            class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full"
-            data-category="rolls"
-          >
-            Роллы
-          </button>
-          <button
-            class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full"
-            data-category="sets"
-          >
-            Сеты
-          </button>
-          <button
-            class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full"
-            data-category="vegan"
-          >
-            Вегетарианское
-          </button>
-        </div>
-        <div
-          id="products"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        ></div>
-      </section>
-
-      <!-- Cart Modal -->
-      <div
-        id="cartModal"
-        class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-20"
-      >
-        <div class="bg-white p-6 rounded-lg w-full max-w-md">
-          <h2 class="text-2xl font-bold mb-4">Корзина</h2>
-          <div id="cartItems"></div>
-          <div class="mt-4">
-            <p class="text-gray-600">
-              До бесплатной доставки:
-              <span id="freeDeliveryProgress">1000 ₽</span>
-            </p>
-            <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
-              <div
-                id="progressBar"
-                class="bg-red-500 h-4 rounded-full"
-                style="width: 0%"
-              ></div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-800">
+  <div class="flex flex-col h-full w-full">
+    <!-- Top Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="/images/hiro-express-logo.jpeg" alt="Hiro Express">
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                     <button id="cart-button" class="p-2 rounded-full text-gray-600 hover:text-red-500 relative">
+                        <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        <!-- <span id="cart-badge" class="cart-badge absolute inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">0</span> -->
+                    </button>
+                    <button class="md:hidden p-2 rounded-md text-gray-600 hover:text-red-500 hover:bg-gray-100">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </div>
-          </div>
-          <p class="mt-4 text-lg font-semibold">
-            Итого: <span id="cartTotal">0 ₽</span>
-          </p>
-          <button id="closeModalBtn" class="mt-4 text-red-600">Закрыть</button>
         </div>
-      </div>
-    </main>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-r from-red-500 to-orange-500 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-8 lg:mb-0">
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
+                        Суши и роллы с доставкой за 60 минут
+                    </h1>
+                    <p class="text-xl mb-6">Попробуйте наши новинки этого месяца со скидкой 20%</p>
+                    <!-- <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#menu" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10">
+                            Смотреть меню
+                        </a>
+                    </div> -->
+                </div>
+                <!-- <div class="relative">
+                    <img src="https://via.placeholder.com/600x500?text=Sushi+Presentation" alt="Суши презентация" class="rounded-lg shadow-xl zoom-on-hover">
+                    <div class="absolute -top-4 -left-4 bg-yellow-400 text-red-600 font-bold px-4 py-2 rounded-full text-sm discount-pulse">
+                        Акция! 3 ролла по цене 2
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Categories -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sticky top-16 bg-white/80 backdrop-blur-md z-40">
+        <div class="border-b border-gray-200">
+            <nav id="category-tabs" class="-mb-px flex space-x-8 overflow-x-auto pb-4">
+                <!-- Категории будут загружены сюда динамически -->
+                 <!-- <div class="animate-pulse flex space-x-8">
+                    <div class="h-6 bg-gray-200 rounded w-24"></div>
+                    <div class="h-6 bg-gray-200 rounded w-20"></div>
+                    <div class="h-6 bg-gray-200 rounded w-20"></div>
+                    <div class="h-6 bg-gray-200 rounded w-28"></div>
+                </div> -->
+            </nav>
+        </div>
+    </div>
+
+    <!-- Menu Grid -->
+    <div id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Элементы меню будут загружены сюда динамически -->
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-400 text-sm">
+                © 2025 Hiro Express. Все права защищены.
+            </p>
+        </div>
+    </footer>
+  </div>
   </body>
 </html>
